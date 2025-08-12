@@ -33,7 +33,7 @@ jobs:
   fake:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Use Node.js 20.x
         uses: actions/setup-node@v4.2.0
         with:
@@ -53,7 +53,7 @@ jobs:
       contents: read
       pull-requests: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           persist-credentials: false
           fetch-depth: 0
@@ -135,7 +135,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout into dir1
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           submodules: true
@@ -175,7 +175,7 @@ jobs:
           path: dir2/dist
 
       - name: Checkout into dir2
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           submodules: true
@@ -211,7 +211,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           fetch-depth: 0
@@ -271,7 +271,7 @@ jobs:
 
     steps:
       - name: Checkout branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           fetch-depth: 0
@@ -315,7 +315,7 @@ jobs:
 
     steps:
       - name: Checkout branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           fetch-depth: 0
@@ -354,7 +354,7 @@ jobs:
 
     steps:
       - name: Checkout branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           fetch-depth: ${{ matrix.fetch-depth }}
@@ -388,7 +388,7 @@ jobs:
 
     steps:
       - name: Checkout branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
@@ -422,7 +422,7 @@ jobs:
 
     steps:
       - name: Checkout branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: ${{ matrix.fetch-depth }}
           persist-credentials: false
@@ -452,7 +452,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Download build assets
         uses: actions/download-artifact@v4
@@ -507,7 +507,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Download build assets
         uses: actions/download-artifact@v4
@@ -562,7 +562,7 @@ jobs:
       pull-requests: read
     steps:
       - name: Checkout into dir1
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           submodules: true
@@ -594,7 +594,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           submodules: true
@@ -631,7 +631,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout into dir1
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           submodules: true
@@ -670,7 +670,7 @@ jobs:
 
     steps:
       - name: Checkout branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -736,7 +736,7 @@ jobs:
 
     steps:
       - name: Checkout branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -831,7 +831,7 @@ jobs:
 
     steps:
       - name: Checkout branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
           submodules: recursive
@@ -1017,7 +1017,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: a52f8621d26d5d9f54b80f74bda2d9eedff94693
           repository: ${{ github.event.pull_request.head.repo.full_name }}
@@ -1055,7 +1055,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           repository: ${{ github.event.pull_request.head.repo.full_name }}
@@ -1134,7 +1134,7 @@ jobs:
         
     steps:
       - name: Checkout branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           repository: ${{ github.event.pull_request.head.repo.full_name }}
@@ -1187,7 +1187,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: true
           repository: ${{ github.event.pull_request.head.repo.full_name }}
